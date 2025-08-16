@@ -1,6 +1,5 @@
 local BlacklistedUsers = {
-    ["Maylovexdlolboy"] = true,
-    ["greguiscool"] = true
+    ["Maylovexdlolboy"] = true
 }
 
 local player = game.Players.LocalPlayer
