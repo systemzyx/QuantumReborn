@@ -82,19 +82,31 @@ MainTab:CreateToggle({
 	CurrentValue = false,
 	Flag = "enlightenment",
 	Callback = function(Value)
-		if Value then
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/w1oxn-umcs/umcs/refs/heads/main/enlightenment'))()
-		end
+autoperm = Value
+local localplr = game.Players.LocalPlayer
+local count = 0
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    if autoperm and localplr.Character and count < 2 then
+        if localplr.Character:FindFirstChild("The Arkenstone") then
+            say("reset me")
+            count += 1
+        end
+    end
+end)
 	end
 })
 MainTab:CreateButton({
 	Name = "Unperm enlighten others",
 	Callback = function()
-		   say("enlighten o")
-         for _ = 1,10 do 
-           say("clearinv o")
-           wait(0)
-        end
+	for i = 1, 2 do
+       say("enlighten o")
+    end
+
+     for i = 1, 10 do
+      say("clearinv o")
+      wait(0)
+     end
 	end
 })
 MainTab:CreateButton({
