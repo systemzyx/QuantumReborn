@@ -75,7 +75,7 @@ MainTab:CreateButton({
 	end
 })
 function say(t)
-  TextChatService.TextChannels.RBXGeneral:SendAsync(t)
+  TextChatService.TextChannels.RBXGeneral:SendAsync(";" .. t)
 end
 MainTab:CreateToggle({
 	Name = "Auto Save-Enlightenment",
